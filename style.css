@@ -324,6 +324,14 @@ section {
     padding-top: 15px;
 }
 
+.link img {
+    width: 17px;
+    height: 17px;
+    margin-top: 2.5px;
+    margin-left: -5px;
+    margin-right: 5px;
+}
+
 .social {
     text-align: center;
     background-image: url("img/p-1093.gif");

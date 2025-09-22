@@ -301,7 +301,7 @@ header a:hover{
     color: #396dac; /* لون الرمز */
     display: inline-block; /* لجعل الرمز يظهر بجانب النص */
     width: 1.2em; /* عرض المساحة المخصصة للرمز */
-    margin-right: 8px; /* مسافة بين الرمز والنص */
+    margin-right: 5px; /* مسافة بين الرمز والنص */
     font-weight: bold; /* جعل الرمز عريض */
 }
 

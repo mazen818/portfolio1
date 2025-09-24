@@ -1,5 +1,5 @@
 * {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
 }
 
 body {
@@ -9,13 +9,13 @@ body {
     margin: 0;
     padding: 0;
     justify-content: center;
-    overflow: scroll;
     scrollbar-color: #ed2525 #0e0e0e;
-    overflow-x: hidden
+    scrollbar-width: thin;
 }
-.about::-webkin-scrollbar {
-    width: 0;
 
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #2c2929;
 }
 
 .nav-container {
@@ -88,6 +88,19 @@ header a:hover{
     padding: 20px;
 }
 
+.profile_section .ploor {
+    color: #396dac;
+    background-color: #396dac;
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 0px 0px 0px 40%;
+    opacity: 0.25;
+    filter: blur(40px);
+}
 
 .image{
     width: 380px;
@@ -562,15 +575,37 @@ footer p{
 
 /* --------------------------------------------------------------------------------------------- */ 
 
-@media (max-width: 999px) {
+
+@media (max-width: 740px) {
+    .profile_section .ploor {
+        height: 55%;
+    }
+    
+
+@media (max-width: 510px) {
+    .profile_section .ploor {
+        height: 62%;
+    }
+}
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
     .image{
         float: none;
         margin: auto;
         display: block;
         margin: 0px auto 80px auto;
-        width: 60%;
+        width: 50%;
         position: none;
         right: 0;
+    }
+
+    .profile_section .ploor {
+        height: 200%;
+        width: 100%;
+        border-radius: 0px 0px 50% 50%;
     }
 
     .page{
@@ -615,13 +650,16 @@ footer p{
         display: block;
     }
 
+    .profile_section .ploor {
+        height: 70%;
+    }
+
 }
 
-@media (max-width: 1300px) and (min-width: 1000px) {
+@media (max-width: 1300px) and (min-width: 1001px) {
     .image{
         width: 30%;
         right: 3%;
-        
     }
 
 }
@@ -674,6 +712,15 @@ footer p{
         display: block;
     }
 
+    .profile_section .ploor {
+        height: 65%;
+        border-radius: 0px 0px 50% 50%;
+    }
+
+    .image{
+        width: 60%;
+    }
+
     .page b {
         color: #396dac;
         font-size: 3em;
@@ -709,6 +756,10 @@ footer p{
 /* --------------------------------------------------------------------------------------------- */
 
 @media (max-width: 480px) {
+
+    .profile_section .ploor {
+        height: 54%;
+    }
 
     .page b {
         color: #396dac;
@@ -769,6 +820,10 @@ footer p{
 /* -------------------------------------------------------------------------------------------- */
 
 @media (max-width: 385px) {
+
+    .profile_section .ploor {
+        height: 49%;
+    }
 
     .about li {
         font-size: 0.8rem;

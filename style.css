@@ -1,5 +1,6 @@
 * {
-    scroll-behavior: smooth;    
+    scroll-behavior: smooth; 
+
 }
 
 body {
@@ -86,6 +87,9 @@ header a:hover{
 .profile_section {
     margin-top: 120px;
     padding: 20px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .image{
@@ -147,6 +151,7 @@ header a:hover{
     color: #396dac;
     font-size: 3.8em;
     position: relative;
+    height: fit-content;
     top: -35px;
 }
 
@@ -241,6 +246,7 @@ header a:hover{
     margin-top:180px;
     margin-bottom: 30px;
     background-color: #1E201E;
+
 }
 
 
@@ -252,12 +258,18 @@ header a:hover{
     width: fit-content;
     margin: auto;
     padding: 0px 0px 50px 0px;
+        animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
 }
 
 .about_me {
     display: flex;
     justify-content: space-between;
     gap: 80px;
+        animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 25%;
 }
 
 .about border, .skills border, .my_projects border {
@@ -400,6 +412,9 @@ header a:hover{
     font-size: 1.1em;
     box-shadow: 0px 0px 10px 2px #1a1a1b;
     transition: 0.3s;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 .tag img {
@@ -434,6 +449,9 @@ header a:hover{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
+        animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20%;
 }
 
 .projects {
@@ -539,6 +557,9 @@ header a:hover{
 .social h1{
     font-size: 2.7em;
     font-weight: 650;
+        animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
 }
 
 .social span{
@@ -549,6 +570,9 @@ header a:hover{
     margin: 15px;
     width: 200px;
     transition-duration: 0.3s;
+        animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
 }
 
 .phone h3, .email h3, .location h3{
@@ -576,6 +600,9 @@ header a:hover{
 .accounts{
     margin-top: 20px;
     margin-bottom: 50px;
+        animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
 }
 
 .accounts a{
@@ -600,6 +627,9 @@ header a:hover{
 .social nav {
     display: inline-block;
     padding: 15px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 0%;
 }
 .social nav a {
     color: #d6d6d6;
@@ -637,6 +667,19 @@ footer p{
 #contact:active{
     transition-duration: 1s;
 }
+
+@keyframes appear {
+    from {  
+            opacity: 0;
+            scale: 0.5;
+        }
+
+    to {
+            opacity: 1;
+            scale: 1;
+        }
+    
+}   
 
 /* --------------------------------------------------------------------------------------------- */
 

@@ -4,7 +4,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
     /* عرض شريط التمرير */
     height: 10px;
     /* ارتفاع شريط التمرير */
@@ -43,11 +43,6 @@ body {
     justify-content: center;
     scrollbar-color: #ed2525 #0e0e0e;
     scrollbar-width: thin;
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-    background-color: #2c2929;
 }
 
 .nav-container {
@@ -291,7 +286,7 @@ header a:hover{
     padding: 0px 0px 50px 0px;
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 25%;
 }
 
 .about_me {
@@ -538,9 +533,9 @@ header a:hover{
 }
 
 .projects .work {
-   padding-left: 20px;
-   margin-top: 20px;
-   width: fit-content;
+    padding-left: 20px;
+    margin-top: 20px;
+    width: fit-content;
 }
     
 .work h4 {
@@ -581,9 +576,8 @@ header a:hover{
 
 .social {
     text-align: center;
-    background-image: url("img/p-1093.gif");
+    background-image: url("img/black\ background\ Clipchamp.gif");
     background-size: cover;
-
     border-top: #282828 solid 1.5px;
     padding-bottom: 40px;
     padding-top: 40px;
@@ -598,22 +592,29 @@ header a:hover{
 .social h1{
     font-size: 2.7em;
     font-weight: 650;
-        animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+    margin-bottom: 100px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+.con {
+    width: fit-content;
+    position: relative;
+    margin: auto;
 }
 
 .social span{
     border: #282828 2px solid;
     border-radius: 18px;
     padding: 5px 50px 5px 50px;
-    display:inline-block;
+    display:block;
     margin: 15px;
-    width: 200px;
+    width: 60%;
     transition-duration: 0.3s;
-        animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }
 
 .phone h3, .email h3, .location h3{
@@ -639,11 +640,12 @@ header a:hover{
 }
 
 .accounts{
-    margin-top: 20px;
+    justify-self:center;
+    margin-top: 40px;
     margin-bottom: 50px;
-        animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
 }
 
 .accounts a{
@@ -665,12 +667,13 @@ header a:hover{
 .accounts a:hover{
     background-color: #191919dc;
 }
+
 .social nav {
     display: inline-block;
     padding: 15px;
     animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 0%;
+        animation-timeline: view();
+        animation-range: entry 0% cover 15%;
 }
 .social nav a {
     color: #d6d6d6;
@@ -687,6 +690,87 @@ header a:hover{
 .social nav:hover a{
     background-color: #0e2c53;
     font-size: 1.35em;
+}
+
+.soc {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.social .ms {
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    position: relative;
+    top: -50px;
+    right: 20%;
+}
+
+.ms input {
+    background-color: #242526e9;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1.5px;
+    border-radius: 7px;
+    outline: none;
+    display: inline-block;
+    width: 45%;
+    padding: 10px;
+    margin: 3px;
+    height: 20px;
+    border: #2d2f32e3 solid 1.5px;
+    transition: 0.3s;
+        animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 15%;
+}
+
+.ms textarea {
+    background-color: #242526e9;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1.5px;
+    border: #2d2f32e3 solid 1.5px;
+    outline: none;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    width: 95%;
+    height: fit-content;
+    margin: 5px;
+    padding: 10px;
+    transition: 0.3s;
+        animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 15%;
+}
+
+.ms textarea:focus, .ms input:focus {
+    border: #396dac solid 1.5px;
+}
+
+.ms textarea::placeholder, .ms input::placeholder {
+    font-family: 'Segoe UI',sans-serif;
+}
+
+.ms #sub {
+    color: #d6d6d6;
+    width: 100px;
+    font-size: 1.2em;
+    border: solid 1px #384d72;
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: #113057;
+    transition-duration: 0.3s;
+    box-shadow: 0px 0px 2px 0px #143a69;
+    cursor: pointer;
+        transition: 0.3s;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 15%;
+}
+
+.ms #sub:hover {
+    background-color: #0e2c53;
 }
 
 footer {
@@ -1049,3 +1133,79 @@ footer p{
     }
 }
 /* --------------------------------------------------------------------------------------------- */
+@media (max-width: 1325px) {
+
+    .ms input {
+        width: 44%;
+    }
+
+}
+
+@media (max-width: 1105px) {
+
+    .ms input {
+        width: 43%;
+    }
+
+}
+
+@media (max-width: 946px) {
+
+    .ms input {
+        width: 42.5%;
+    }
+
+    .soc {
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 912px) {
+
+    .ms input {
+        width: 42%;
+    }
+
+}
+
+@media (max-width: 858px) {
+
+    .social .soc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social .con {
+        order: 2;
+        margin-top: 40px;
+    }
+        
+
+    .social .ms {
+        top: 0;
+        right: 0;
+        order: 1;
+    }
+
+    .ms textarea {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .ms input {
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 330px) {
+
+    .ms input {
+        width: 39%;
+    }
+
+}

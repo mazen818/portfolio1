@@ -82,12 +82,20 @@ header {
     box-sizing: border-box;
 }
 
-header img{
-    border-radius: 50%;
-    width: 50px;
-    border: solid 2px #1a1a1b;
+header h2{
     margin: auto 20px auto 30px;
-    background-color: #143a69;
+    font-size: 1.7rem;
+    position: relative;
+}
+
+header h2:after {
+    content: ".";
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+    color: #396dac;
+    position: absolute;
+    right: -11px;
+    top: 5px;
 }
 
 header nav {
@@ -739,9 +747,9 @@ header a:hover{
     margin: 5px;
     padding: 10px;
     transition: 0.3s;
-        animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 15%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
 }
 
 .ms textarea:focus, .ms input:focus {
@@ -937,7 +945,7 @@ footer p{
 
 /* --------------------------------------------------------------------------------------------- */
 
-@media (max-width: 610px) {
+@media (max-width: 620px) {
     .nav-links {
         position: absolute;
         top: 72px;

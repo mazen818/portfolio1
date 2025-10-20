@@ -91,12 +91,12 @@ header h2{
 
 header h2:after {
     content: ".";
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     font-size: 1.07em;
     color: #396dac;
     position: absolute;
     right: -11px;
-    top: 3.5px;
+    top: 1.7px;
 }
 
 header nav {
@@ -1080,6 +1080,9 @@ footer p{
         height: 180px;
     }
 
+    .ms input::placeholder {
+        font-size: 0.9em;
+    }
 }
 
 /* -------------------------------------------------------------------------------------------- */
@@ -1092,7 +1095,7 @@ footer p{
 }
 
 
-@media (max-width: 385px) {
+@media (max-width: 390px) {
 
     .about li {
         font-size: 0.8rem;
@@ -1132,6 +1135,10 @@ footer p{
 
     .education {
         font-size: 0.9rem;
+    }
+
+    .ms input::placeholder {
+        font-size: 0.8em;
     }
 
 }

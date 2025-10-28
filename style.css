@@ -128,7 +128,7 @@ header a{
 header a:hover{
     color: #396dac;
     scale: calc(1.05);
-    transform: translateX(8px);
+    transform: translateY(-3px);
 }
 
 .profile_section {
@@ -955,6 +955,10 @@ footer p{
         margin: 0;
         position: relative;
         left: 10px;
+    }
+
+    header a:hover {
+        transform: translateX(8px);
     }
         
     #menu,

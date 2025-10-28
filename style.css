@@ -3,6 +3,10 @@
 
 }
 
+script {
+    display: none;
+}
+
 ::-webkit-scrollbar {
     width: 12px;
     /* عرض شريط التمرير */
@@ -57,34 +61,41 @@ body {
 }
 
     
-/* زرار القائمة (الهامبرجر) */
-.menu-btn {
+/*زرار القائمة */
+#menu, #close {
     display: none;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 25px;
+    color: white;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
 }
-    
-/* اخفاء checkbox */
-#menu-toggle {
-    display: none;
+
+#menu:hover,
+#close:hover {
+    color: #27568f;
+    background-color: #3f74b541;
 }
 
 header {
-    background-color: #0e0e0edf;
-    padding: 10px;
+    background-color: #0e0e0ed5;
+    padding: 5px;
+    width: 750px;
+    border-radius: 40px;
     text-align: right;
     display: flex;
-    align-items: center;
+    justify-self: center;
     justify-content: space-between;
     position: sticky;
-    top: -5px;
+    top: 15px;
     z-index: 100;
     box-sizing: border-box;
 }
 
 header h2{
     margin: auto 20px auto 30px;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     position: relative;
     font-weight: 700;
 }
@@ -107,16 +118,17 @@ header nav {
 }
 
 header a{
-    font-size: 1.1em;
+    font-size: 1em;
     text-decoration: none;
     width: fit-content;
     color: #a7a7a7;
-    transition-duration: 0.3s;
+    transition:color 0.2s, scale 0.3s, transform 0.3s;
 }
 
 header a:hover{
     color: #396dac;
-    transform: scale(1.03);
+    scale: calc(1.05);
+    transform: translateX(8px);
 }
 
 .profile_section {
@@ -904,7 +916,67 @@ footer p{
 
 /* --------------------------------------------------------------------------------------------- */
 
-@media (max-width: 730px) {
+@media (max-width: 765px) {
+
+    header {
+        width: 60%;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 1%;
+        border-radius: 40px;
+        flex-direction: column;
+        background: #0e0e0edf;
+        width: 98%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        text-align: left;
+        transition: 0.3s;
+        box-sizing: border-box;
+    }
+        
+    header a {
+        width: fit-content;
+        margin: 0;
+        position: relative;
+        left: 10px;
+    }
+        
+    #menu,
+    #close {
+        display: block;
+        position: relative;
+        right: 20px;
+        border-radius: 50%;
+        padding: 3px 8px;
+    }
+
+    #menu {
+        animation: rotate 0.2s forwards reverse;
+    }
+    
+    #close {
+        display: none;
+        position: relative;
+        right: -5px;
+        border-radius: 50%;
+        padding: 3px 9px;
+        animation: rotate 0.5s forwards;
+    }
+        
+    @keyframes rotate {
+        from {
+            rotate: calc(0deg);
+        }
+        
+        to {
+            rotate: calc(180deg);
+        }
+    }
 
     .about_me {
         display: block;
@@ -952,39 +1024,6 @@ footer p{
 /* --------------------------------------------------------------------------------------------- */
 
 @media (max-width: 620px) {
-    .nav-links {
-        position: absolute;
-        top: 72px;
-        left: -100%;
-        flex-direction: column;
-        background: #0e0e0edf;
-        width: 100%;
-        padding-top: 15px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-        text-align: left;
-        transition: 0.3s;
-        box-sizing: border-box;
-    }
-    
-    header a {
-        width: fit-content;
-        margin: 0;
-    }
-
-    header a:hover {
-        color: #396dac;
-        font-size: 1.15em;
-    }
-    
-    /* إظهار عند التفعيل */
-    #menu-toggle:checked~.nav-links {
-        left: 0;
-    }
-    
-    .menu-btn {
-        display: block;
-    }
 
     .image{
         width: 60%;
@@ -1020,6 +1059,10 @@ footer p{
         transform: translateY(-20%);
     }
 
+    .experience h4, .education h4 {
+        font-size: 0.9em;
+    }
+
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -1051,11 +1094,20 @@ footer p{
             font-size: 1rem;
         }
 
+    .experience h4,
+    .education h4 {
+        font-size: 0.8em;
+    }
+
 }
 
 /* --------------------------------------------------------------------------------------------- */
 
 @media (max-width: 445px) {
+
+    header {
+        width: 60%;
+    }
 
     .my_projects h1 {
         font-size: 2.2rem;
@@ -1083,11 +1135,19 @@ footer p{
     .ms input::placeholder {
         font-size: 0.9em;
     }
+
+    .education p {
+        font-size: 0.9em;
+    }
 }
 
 /* -------------------------------------------------------------------------------------------- */
 
 @media (max-width: 405px) {
+
+        header {
+                width: 65%;
+            }
 
     .about li {
         font-size: 0.9rem;

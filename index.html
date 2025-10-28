@@ -7,12 +7,9 @@
     <title>Mazen Mohamed | Front-end Developer</title>
     <link rel="icon" href="img/pngtree-computer-coding-flat-icon-png-image_3962716.png">
     <link rel="stylesheet" href="style.css">
+    <script src="my_page.js"></script>
     <link rel="stylesheet" href="../CSS/all.min.css"> <!-- font awesome -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Kalnia+Glaze:wght@100..700&family=Tilt+Prism&display=swap" rel="stylesheet">
     
     <style>
     </style>
@@ -28,16 +25,16 @@
             <nav>
                 <div class="nav-container">
                     
-                    <!-- زر القائمة -->
-                    <label for="menu-toggle" class="menu-btn">☰</label>
-                    <input type="checkbox" id="menu-toggle">
-             <div class="nav-links">
-                <a href="#Home">Home</a>
-                <a href="#about">About me</a>
-                <a href="#skills">Skills</a>
-                <a href="#my_projects">My projects</a>
-                <a href="#contact">Contact</a>
-             </div>
+                    <button class="open" id="menu" onclick="x()">☰</button>
+                    <button class="close" id="close" onclick="y()">✖</button>
+
+                    <div class="nav-links">
+                        <a href="#Home">Home</a>
+                        <a href="#about">About me</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#my_projects">My projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
             </nav>
     </header>
 
@@ -61,7 +58,7 @@
                 <a href="https://wa.me/+201287504067" target="_blank"><img src="img/whatsapp1.png"></a>
                 <br>
                 <a href="#my_projects" class="btn">My Work </a>
-                <a href="#contact" class="btn_contact">Contact Me</a>
+                <a href="#contact" class="btn_contact" >Contact Me</a>
             </div>
 
 
@@ -87,6 +84,7 @@
                 </div>
 
                 <div class="education">
+
                     <h2><img src="img/mortarboard.png" draggable="false" style="position: relative; top: 8px; width: 28px;"> Education</h2>
 
                     <p><span>Bachelor's degree in Computer Science (In Progress)</span> <br>
@@ -96,6 +94,7 @@
                     Working on various academic projects related to web applications.</h4>
                     
                     <div class="experience" style="padding-top: 10px;">
+
                         <h2><img src="img/portfolio.png" draggable="false" style="position: relative; top: 2px; width: 25px;"> Work Experience</h2>
                     
                         <p><span>Front-End Web Developer</span> <br>
@@ -104,6 +103,7 @@
                         <h4>● Developed responsive web applications using Next.js and Tailwind. <br>
                         ● Enhanced website performance and user experience.</h4>
                     </div>
+
                 </div>
             
             
@@ -259,6 +259,7 @@
     <footer>
         <p>&copy; Mazen | All rights reserved 2025<p>
     </footer>
+
 
 </body>
 

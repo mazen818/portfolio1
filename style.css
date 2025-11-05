@@ -3,9 +3,39 @@
 
 }
 
-script {
+#btn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: lighter;
+    padding: 5px 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: #396dac;
+    transform: rotate(270deg);
+    box-shadow: 0px 0px 10px 0px #143a69;
+    cursor: pointer; 
     display: none;
+    z-index:1000 ;
+    animation: scrollUp 0.5s forwards ;
 }
+#btn:hover {
+    background-color: #295182;
+}
+
+@keyframes scrollUp {
+    from {
+        bottom: -15px;
+        right: -15px;
+}
+    to {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -13,6 +43,7 @@ script {
     height: 10px;
     /* ارتفاع شريط التمرير */
 }
+
 
 ::-webkit-scrollbar-track {
     background-color: #383636;
@@ -24,7 +55,7 @@ script {
 ::-webkit-scrollbar-thumb {
     background-color: #2f68ae79;
     /* لون مقبض شريط التمرير */
-    border-radius: 10px;
+    border-radius: 5px;
     /* جعل مقبض شريط التمرير دائري */
 }
 
@@ -45,8 +76,7 @@ body {
     margin: 0;
     padding: 0;
     justify-content: center;
-    scrollbar-color: #ed2525 #0e0e0e;
-    scrollbar-width: thin;
+    overflow-x: hidden;
 }
 
 .nav-container {
@@ -136,9 +166,7 @@ header a:hover{
 .profile_section {
     margin-top: 120px;
     padding: 20px;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    position: relative;
 }
 
 .image{
@@ -149,6 +177,16 @@ header a:hover{
     position: relative;
     right: 8%;
     border-radius: 15px;
+}
+@keyframes image {
+    from {
+        right: 0px;
+        opacity: 0.5;
+    }
+    to {
+        right: 8%;
+        opacity: 1;
+    }
 }
 
 
@@ -163,7 +201,7 @@ header a:hover{
 
 .image img:hover{
     transform: scale(1.05);
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .bord{
@@ -205,6 +243,16 @@ header a:hover{
     width: 55%;
     position: relative;
     top: -30px;
+}
+@keyframes page {
+    from {
+        left: -50px;
+        opacity: 0.5;
+    }
+    to {
+        left: 0px;
+        opacity: 1;
+    }
 }
 
 .page b{
@@ -316,23 +364,32 @@ header a:hover{
 
 
 .about h1, .skills h1, .my_projects h1 {
-    display: block;
+    display: none;
     text-align: center;
-    font-size: 2.8em;
+    font-size: 3em;
     font-weight:1000px;
     width: fit-content;
     margin: auto;
     padding: 0px 0px 50px 0px;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+    animation: h1 1s linear;
+}
+@keyframes h1 {
+    from {
+        transform: translateY(120px);
+        scale: 0.75;
+        opacity: 0.2;
+    }
+    to {
+        transform: translateY(0px); 
+        scale: 1;   
+        opacity: 1;   
+    }
 }
 
 .about_me {
     display: flex;
     justify-content: space-between;
     gap: 80px;
-
 }
 
 .about border, .skills border, .my_projects border {
@@ -358,6 +415,18 @@ header a:hover{
     line-height: 2em;
     color: #b5b5b5;
 }
+@keyframes p {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+        scale: 0.8;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+        scale: 1;
+    }
+}
 
 .info {
     width: 55%;
@@ -365,7 +434,7 @@ header a:hover{
 }
 
 .info p {
-    animation: appear linear;
+    animation: appear alternate linear;
     animation-timeline: view();
     animation-range: entry 0% cover 25%;
 }
@@ -427,11 +496,22 @@ header a:hover{
 }
 
 .education {
+    display: none;
     width: 35%;
     position: relative;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+}
+@keyframes education {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+        scale: 0.7;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+        scale: 1;
+    }
 }
 
 .education::before {
@@ -443,6 +523,7 @@ header a:hover{
 }
 
 .list{
+    display: none;
     background-image: linear-gradient(to right, #131414fe, #181818f0);
     border-radius: 15px;
     width: fit-content;
@@ -581,7 +662,7 @@ header a:hover{
     background-color: #3e6cbb25; 
     color: #1d4fa4;
     font-weight: 400;
-    padding: 1px 15px;
+    padding: 2px 15px 5px 15px;
     border-radius: 20px;
     margin: 5px 5px 5px 5px;
     display: inline-block;
@@ -733,11 +814,22 @@ header a:hover{
 
 .soc {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .social .ms {
+    display: grid;
     margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+    "inp1 inp1 inp2 inp2"
+    "inp3 inp3 inp4 inp4"
+    "inp5 inp5 inp5 inp5"
+    "inp5 inp5 inp5 inp5"
+    "inp5 inp5 inp5 inp5"
+    "inp5 inp5 inp5 inp5"
+    "inp5 inp5 inp5 inp5";
     padding: 20px;
     width: 90%;
     position: relative;
@@ -745,18 +837,15 @@ header a:hover{
     right: 20%;
 }
 
-.ms input {
+.ms :is(input, textarea) {
     background-color: #242526e9;
     color: white;
     font-family: 'Segoe UI', sans-serif;
     letter-spacing: 1.5px;
     border-radius: 7px;
     outline: none;
-    display: inline-block;
-    width: 45%;
     padding: 10px;
     margin: 3px;
-    height: 20px;
     border: #2d2f32e3 solid 1.5px;
     transition: 0.3s;
         animation: appear linear;
@@ -764,36 +853,27 @@ header a:hover{
             animation-range: entry 0% cover 15%;
 }
 
-.ms textarea {
-    background-color: #242526e9;
-    color: white;
-    font-family: 'Segoe UI', sans-serif;
-    letter-spacing: 1.5px;
-    border: #2d2f32e3 solid 1.5px;
-    outline: none;
-    letter-spacing: 1px;
-    border-radius: 10px;
-    width: 95%;
-    height: fit-content;
-    margin: 5px;
-    padding: 10px;
-    transition: 0.3s;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 15%;
-}
 
-.ms textarea:focus, .ms input:focus {
+.ms input:focus .ms textarea:focus {
     border: #396dac solid 1.5px;
 }
 
-.ms textarea::placeholder, .ms input::placeholder {
+.ms input::placeholder .ms textarea::placeholder {
     font-family: 'Segoe UI',sans-serif;
 }
 
+.ms #tel {
+    list-style: none;
+}
+
 .ms #sub {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin: 10px;
     color: #d6d6d6;
-    width: 100px;
+    width: fit-content;
     font-size: 1.2em;
     border: solid 1px #384d72;
     padding: 7px 20px;
@@ -836,11 +916,13 @@ footer p{
     from {  
             opacity: 0;
             scale: 0.5;
+            transform: translateY(100px);
         }
 
     to {
             opacity: 1;
             scale: 1;
+            transform: translateY(0px);
         }
     
 }   
@@ -857,6 +939,17 @@ footer p{
         position: none;
         right: 0;
     }
+        @keyframes image {
+            from {
+                right: -12%;
+                opacity: 0.5;
+            }
+    
+            to {
+                right: 0px;
+                opacity: 1;
+            } 
+        }
 
     .profile_section .ploor {
         height: 200%;
@@ -1259,43 +1352,13 @@ footer p{
     }
 }
 /* --------------------------------------------------------------------------------------------- */
-@media (max-width: 1325px) {
 
-    .ms input {
-        width: 44%;
-    }
-
-}
-
-@media (max-width: 1105px) {
-
-    .ms input {
-        width: 43%;
-    }
-
-}
-
-@media (max-width: 946px) {
-
-    .ms input {
-        width: 42.5%;
-    }
-
-    .soc {
-        gap: 30px;
-    }
-
-}
-
-@media (max-width: 912px) {
-
-    .ms input {
-        width: 42%;
-    }
-
-}
 
 @media (max-width: 858px) {
+
+    .ms {
+        width: 40%;
+    }
 
     .social .soc {
         display: flex;
@@ -1313,25 +1376,6 @@ footer p{
         top: 0;
         right: 0;
         order: 1;
-    }
-
-    .ms textarea {
-        width: 90%;
-    }
-}
-
-@media (max-width: 500px) {
-
-    .ms input {
-        width: 40%;
-    }
-
-}
-
-@media (max-width: 330px) {
-
-    .ms input {
-        width: 39%;
     }
 
 }

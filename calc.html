@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+
+</head>
+
+<header></header>
+
+<body id="bd">
+
+    <!-- <button class="lightmood" onclick="mood()"></button> -->
+    
+    <div class="calc" id="calc">
+        <input id="inp" readonly>
+
+        <div class="but" id="but">   
+
+            <button class="b" onclick="clearinp()" style="color: rgb(214, 15, 15); font-size: 2em; font-weight: 500;">C</button>
+            <button class="x" onclick="del()" style="transform:rotate(180deg); font-size: 1.5em; font-weight: 900;" >⌦</button>
+            <button class="x" onclick="clicknumber('%')">%</button>
+            <button class="x" onclick="clicknumber('*')">×</button>
+            <button class="b" onclick="clicknumber('7')">7</button>
+            <button class="b" onclick="clicknumber('8')">8</button>
+            <button class="b" onclick="clicknumber('9')">9</button>
+            <button class="x" onclick="clicknumber('/')">÷</button>
+            <button class="b" onclick="clicknumber('4')">4</button>
+            <button class="b" onclick="clicknumber('5')">5</button>
+            <button class="b" onclick="clicknumber('6')">6</button>
+            <button class="x" onclick="clicknumber('+')">+</button>
+            <button class="b" onclick="clicknumber('1')">1</button>
+            <button class="b" onclick="clicknumber('2')">2</button>
+            <button class="b" onclick="clicknumber('3')">3</button>
+            <button class="x" onclick="clicknumber('-')">−</button>
+            <button class="x">☰</button>
+            <button class="b" onclick="clicknumber('0')">0</button>
+            <button class="b" onclick="clicknumber('.')">․</button>
+            <button class="eq" onclick="calculate()">=</button>
+
+        </div>
+
+        <!-- <div class="add"></div>
+
+            <button onclick="clicknumber( ')' )" >)/button>
+            <button onclick="clicknumber('(')" >(</button>
+            <button onclick="clicknumber('')"></button>
+            <button onclick="clicknumber('')"></button>
+            <button onclick="clicknumber('')"></button>
+            <button onclick="clicknumber('')"></button> -->
+
+
+    </div>
+    <script src="calc.js" defer></script>
+</body>

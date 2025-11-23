@@ -7,8 +7,8 @@
     <title>Mazen Mohamed | Front-end Developer</title>
     <link rel="icon" href="img/صورة واتساب بتاريخ 1447-05-07 في 00.31.51_6e960aae.png">
     <link rel="stylesheet" href="style.css">
-    <script src="my_page.js"></script>
     <link rel="stylesheet" href="../CSS/all.min.css"> <!-- font awesome -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +16,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Kalnia+Glaze:wght@100..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tilt+Prism&display=swap"
         rel="stylesheet">
+        <script src="my_page.js"></script>
 
     
     <style>
     </style>
     
 </head>
+
+<div id="bcg"></div>
 
 <body id="Home">
 
@@ -37,19 +40,23 @@
                     <button class="open" id="menu" onclick="y()">☰</button>
                     <button class="close" id="close" onclick="y()">✖</button>
 
-                    <div class="nav-links">
+                    <ul class="nav-links">
                         <a href="#Home">Home</a>
                         <a href="#about">About me</a>
                         <a href="#skills">Skills</a>
                         <a href="#my_projects">My projects</a>
                         <a href="#contact">Contact</a>
-                    </div>
+                    </ul>
             </nav>
     </header>
 
     <section>
+        <!-- From Uiverse.io by Donewenfu -->
+        <!-- <div class="loader">
+            <div class="justify-content-center jimu-primary-loading"></div>
+        </div> -->
         
-        <section class="profile_section" id="profile_section">
+        <section class="profile_section " id="profile_section">
 
             <div class="image">
                 <img src="img/1756088460954.GridArt_٢٠٢٥٠٨٢٥_٠٢٥٤٤٣٦١٥.jpg" draggable="false" alt="Profile Picture" class="teacher-image">
@@ -81,23 +88,23 @@
         
         
         <section class="about" id="about">
-            <h1><border>About <strong>Me</strong></border></h1>
+            <h1 class="ma"><border>About <strong>Me</strong></border></h1>
 
             <div class="about_me">
 
-                <div class="info">
-                    <p style="display: none;">Hi, I'm the programer <strong>Mazen Mohamed</strong> with 1+ of experience, I'm Egyption programer, 20 years from Alexandria. <br>
+                <div class="info ma">
+                    <p>Hi, I'm the programer <strong>Mazen Mohamed</strong> with 1+ of experience, I'm Egyption programer, 20 years from Alexandria. <br>
                         I have a passion for programming and web development, and I love to learn new technologies and improve my skills. <br>
                         I'm always looking for new challenges and opportunities to grow in my career. </p>
 
-                        <div class="list">
+                        <div class="list ma">
                             <li>Personal website using HTML/CSS/JS</li>
                             <li>To-Do List App with React</li>
                             <li>Dashboard interface using Tailwind CSS</li>
                         </div>
                 </div>
 
-                <div class="education">
+                <div class="education ma">
 
                     <h2><img src="img/mortarboard.png" draggable="false" style="position: relative; top: 8px; width: 28px;"> Education</h2>
 
@@ -126,25 +133,25 @@
         </section>
             
         <section class="skills" id="skills">
-            <h1><border>Skills</border></h1>
+            <h1 class="ma"><border>Skills</border></h1>
                 
-            <span class="tag"><img src="img/file_type_html_icon_130541.png" draggable="false"> HTML</span>
-            <span class="tag"><img src="img/file_type_css_icon_130661.png" draggable="false"> CSS</span>
-            <span class="tag" style="padding: 15px 24px;"><img src="img/file_type_js_official_icon_130509.png" draggable="false"> JavaScript</span>
-            <span class="tag" style="padding: 15px 22px 15px 23px;"><img src="img/typescript_original_logo_icon_146317.png" draggable="false" style="width: 60px; padding-top: 5px;"> TypeScript</span>
-            <span class="tag"><img src="img/react_original_logo_icon_146374.png" draggable="false">  React.js</span>
-            <span class="tag"><img src="img/file_type_tailwind_icon_130128.png" draggable="false">  Tailwind</span>
+            <span class="tag ma"><img src="img/html-5.png" draggable="false"> HTML</span>
+            <span class="tag ma"><img src="img/css-3.png" draggable="false"> CSS</span>
+            <span class="tag ma" style="padding: 15px 24px 15px 24.2px;"><img src="img/icons8-javascript-240.png" draggable="false"> JavaScript</span>
+            <span class="tag ma" style="padding: 15px 21.5px 15px 23px;"><img src="img/icons8-typescript-240.png" draggable="false" style="width: 60px; padding-top: 5px;"> TypeScript</span>
+            <span class="tag ma"><img src="img/icons8-react-96.png" draggable="false">  React.js</span>
+            <span class="tag ma"><img src="img/icons8-tailwind-css-240.png" draggable="false">  Tailwind</span>
 
         </section>
             
         
         <section class="my_projects" id="my_projects">
-            <h1 for="my_projects"><border><b>My</b>Projects</border></h1>
+            <h1 for="my_projects" class="ma"><border><b>My</b>Projects</border></h1>
 
-            <div class="all_projects">
-                <div class="projects">
+            <div class="all_projects ma">
+                <div class="projects ma">
                     <div class="photo">
-                        <img src="img/لقطة شاشة 2025-09-08 192407.png" draggable="false">
+                        <img id="img" src="img/264shots_so.png" draggable="false">
                     </div>
                         <h2>Teacher platform</h2>
                         <p>The project is a page for his teacher.</p>
@@ -158,9 +165,9 @@
                         </div>
                 </div>
                 
-                <div class="projects">
+                <div class="projects ma">
                     <div class="photo">
-                        <img src="img/لقطة شاشة 2025-11-01 032730.png" draggable="false">
+                        <img id="img" src="img/لقطة شاشة 2025-11-01 032730.png" draggable="false">
                     </div>
                         <h2>Calculator</h2>
                         <p>This a simple calculator</p>
@@ -176,9 +183,9 @@
                 </div>
                 
             
-                <div class="projects">
+                <div class="projects ma">
                     <div class="photo">
-                        <img src="img/5501609ee45d514d1f2c4a63502045e2.gif" draggable="false">
+                        <img id="img" src="img/random of password.png" draggable="false">
                     </div>
                         <h2>Ptoject 3</h2>
                         <p>The feature project</p>
@@ -188,15 +195,15 @@
                         </span>
                     
                         <div class="link">
-                            <a href="#my_project" target="_blank">➲ View Work</a>
+                            <a href="random of password.html" target="_blank">➲ View Work</a>
                         </div>
 
                 </div>  
                 
             
-                <div class="projects">  
+                <div class="projects ma">  
                     <div class="photo">
-                        <img src="img/5501609ee45d514d1f2c4a63502045e2.gif" draggable="false">
+                        <img id="img" src="img/to do list.png" draggable="false">
                     </div>
                         <h2>Ptoject 4</h2>
                         <p>The feature project</p>
@@ -206,7 +213,7 @@
                         </span>
                     
                         <div class="link">
-                            <a href="#my_project" target="_blank">➲ View Work</a>
+                            <a href="to do list.html" target="_blank">➲ View Work</a>
                         </div>
                 </div>
                
@@ -217,12 +224,12 @@
     </section>
 
     <section class="social" id="contact">
-        <h1>Contact <strong>Me</strong>​</h1>
+        <h1 class="ma">Contact <strong>Me</strong>​</h1>
 
 
         <div class="soc">
             
-            <div class="con">
+            <div class="con ma">
                     
                 <span class="email">
                     <img src="img/email.png">
@@ -230,19 +237,19 @@
                     <p>mazenalblshy@gmail.com</p>
                 </span>     
             
-                <span class="phone">
+                <span class="phone ma">
                     <img src="img/phone-call.png" alt="">
                     <h3>Phone</h3>
                     <p>+20 1287504067</p>
                 </span>
             
-                <span class="location">
+                <span class="location ma">
                     <img src="img/pin.png" alt="">
                     <h3>Location</h3>
                     <p>Alexandria, Egypt</p>
                 </span>
             
-                <div class="accounts">
+                <div class="accounts ma">
                     <a href="https://www.facebook.com/share/15SWDJxvJr/" target="_blank"><img src="img/facebook-app-symbol.png"></a>
                     <a href="https://www.instagram.com/mazenmohamed7200?igsh=MTI1a2ptMGh0N2RiYw==" target="_blank"><img src="img/instagram.png"></a>
                     <a href="https://wa.me/+201287504067" target="_blank"><img src="img/whatsapp(1).png"></a>
@@ -251,7 +258,7 @@
             </div>
 
             
-            <form method="get" class="ms">
+            <form method="get" class="ms ma">
                     <input required type="text" id="fname" name="fname" placeholder="Enter your first name" autocomplete="off" style="grid-area: inp1;">
                     <input required type="text" id="lname" name="lname" placeholder="Enter your last name" autocomplete="off" style="grid-area: inp2;">
                     <input required type="email" id="email" name="email" placeholder="Enter your email" autocomplete="off" style="grid-area: inp3;">
@@ -266,7 +273,7 @@
 
         </div>
 
-        <nav calss="home">
+        <nav calss="home ma">
             <a href="#Home">To Home</a>
         </nav>
         
@@ -276,6 +283,44 @@
         <p>&copy; Mazen | All rights reserved 2025<p>
     </footer>
 
+    <script defer>
+        
+            //Animation//
+
+            // الخيارات: هل نخلي الأنيميشن يشتغل مرة واحدة فقط؟
+            const options = {
+                root: null,
+                threshold: 0.2   // نسبة الظهور المطلوبة (20%)
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    let el = entry.target;
+                    if (entry.isIntersecting) {
+                        // لما يدخل الشاشة نضيف الكلاس
+                        el.classList.add('in-view');
+
+                        // لو عايز يشتغل مرة واحدة بس:
+                        //obs.unobserve(el);
+
+                        // لو عايز يتكرر (يطلع ويدخل تاني) ما تعملش unobserve
+                    } else {
+                        // لو حابب ترجع الحالة لما يطلع من الشاشة:
+                        el.classList.remove('in-view');
+                    }
+                });
+            }, options);
+
+            // رصد كل الـ sections اللي عايز تتأنم
+            let ma = document.querySelectorAll('.ma');
+
+            console.log(ma);
+
+            ma.forEach(sec => { 
+                observer.observe(sec)
+            });
+
+    </script>
 
 </body>
 

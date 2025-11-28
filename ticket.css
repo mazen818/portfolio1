@@ -1,0 +1,477 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inconsolata", monospace;
+    background-image: url('images/background-desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: hsl(0, 0%, 100%);
+    padding: 20px;
+    overflow-x: hidden;
+}
+#x1 {
+    position: absolute;
+    bottom: -110px;
+    left: -70px;
+    z-index: -5;
+}
+#y1{
+    display: none;
+}
+#x2 {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    opacity: 0.5;
+    z-index: -5;
+}
+#x3 {
+    position: absolute;
+    top: 0px;
+    left: -150px;
+    z-index: -5;
+}
+#x5 {
+    position: absolute;
+    top: -80px;
+    left: 420px;
+    z-index: -5;
+}
+#x6 {
+    position: absolute;
+    top: 380px;
+    right: 600px;
+    z-index: -5;
+}
+
+.form {
+    position: relative;
+    justify-self: center;
+    margin-top: 60px;
+    font-size: 24px;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(1, 400px);
+    gap: 30px;
+}
+
+.header {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 20px;
+    width: fit-content;
+    justify-self: center;
+}
+.header p {
+    width: fit-content;
+    color: hsl(252, 6%, 83%);
+    justify-self: center;
+}
+
+.uploadAvatar {
+    cursor: pointer;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 2px dashed hsl(245, 15%, 58%);
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    background-color:hsla(246, 21%, 30%, 0.49);
+    font-size: 18px;
+    color: hsl(252, 6%, 83%);
+}
+.uploadAvatar:focus {
+    box-shadow:inset 0px 0px 0px 2px black;
+    outline: 2px solid hsl(245, 15%, 58%);
+}
+.uploadAvatar #uploade {
+    width: 50px;
+    height: 50px;
+    background-color: hsla(245, 19%, 35%, 0.545);
+    justify-self: center;
+    overflow: hidden;
+    border: 1px solid hsl(246, 15%, 43%);
+    border-radius: 10px;
+    transition: 0.3s ease-out;
+}
+
+.uploadAvatar #preview {
+    display: none;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+.uploadAvatar h2 {
+    position: absolute;
+    width: fit-content;
+    justify-self: center;
+    top: -30px;
+    left: -67%;  
+    color: hsl(252, 6%, 83%);
+    font-size: 20px;
+}
+.uploadAvatar h3 {
+    position: absolute;
+    bottom: -25px;
+    left: 0px;
+    font-size: 12px;
+    color: hsl(245, 15%, 58%);
+}
+.uploadAvatar p {
+    margin-top: 10px;
+}
+.uploadAvatar #uploade:hover {
+    scale: calc(1.05);
+}
+#removORchange {
+    display: flex;
+    justify-self: center;
+}
+#remove, #change {
+    display: none;
+    width: fit-content;
+    background-color: hsla(245, 19%, 35%, 0.545);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: hsl(240, 3%, 71%);
+    font-weight: 500;
+    margin: 20px 5px 0px 5px;
+    border: none;
+    cursor: pointer;
+}
+#remove {
+    text-decoration: underline;
+}
+#remove:hover, #change:hover {
+    background-color: hsla(245, 19%, 35%, 0.707);
+}
+
+form {
+    position: relative;
+    display: block;
+}
+input {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid hsl(245, 15%, 58%);
+    outline: none;
+    border-radius: 10px;
+    background-color: hsla(246, 21%, 30%, 0.49);
+    color: hsl(0, 0%, 100%);
+}
+input:focus {
+    box-shadow: inset 0px 0px 0px 2px black;
+    outline: 1px solid white;
+}
+input:hover, .uploadAvatar:hover {
+    background-color: hsla(245, 19%, 35%, 0.707);
+}
+form h3 {
+    color: hsl(7, 60%, 44%);
+    font-size: 0.55em;
+    font-weight: 500;
+    width: fit-content;
+}
+
+form h2 {
+    position: relative;
+    width: fit-content;
+    top: 5px;
+    right: 0px;
+    color: hsl(252, 6%, 83%);
+    font-size: 20px;
+}
+#informFullName h3, #informEmail h3, #informGit h3{
+    display: none;
+    color: hsl(7, 60%, 44%);
+}
+#uploadAvatar #h3_2 {
+    display: none;
+    color: hsl(7, 60%, 44%);
+}
+
+button {
+    font-family: "Inconsolata", monospace;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 900;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(7, 84%, 68%);
+    border-bottom: 3px solid hsl(7, 84%, 68%);
+    color: hsl(248, 70%, 10%);
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    border-bottom: 3px solid hsl(7, 84%, 68%);
+    background-color: hsl(7, 64%, 56%);
+}
+button:focus {
+    border: none;
+    outline: white solid 2px;
+    box-shadow: inset 0px 0px 0px 2px black;
+}
+
+.creat {
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    display: none;
+    justify-self: center;
+    grid-template-rows: auto auto auto 100px;
+}
+
+#div1 h1 {
+    margin: 20px;
+    font-size: 2.5em;
+}
+
+#div1 span {
+    background-image:linear-gradient(to right, hsl(7, 86%, 67%) , hsl(0, 0%, 100%)) ;
+    background-clip: text;
+    color: transparent;
+}
+#div2 span {
+    color: hsl(7, 88%, 67%);
+}
+#div3 h3 {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    top: 210px;
+    right: -75px;
+    font-size: 17px;
+    color: hsl(240, 1%, 59%);
+}
+#div3 h1 {
+    color: hsla(240, 1%, 59%, 0.629);
+    font-size: 1.8em;
+    font-weight: 500;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    left: 430px;
+    top: 160px;
+    rotate: calc(90deg);
+}
+
+#about {
+    position: relative;
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    top: 270px;
+    left: 25px;
+    text-align: left;
+}
+#image #imageofticket, #image {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+}
+#about h2 {
+    position: relative;
+    top: 5px;
+    font-size: 2em;
+    font-weight: 700;
+}
+#about p {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: hsl(240, 5%, 69%);
+}
+#newTicket {
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+}
+
+@media (max-width: 1025px) {
+
+    #x3 {
+        top: -40px;
+        left: -100px;
+        }
+
+    #x5 {
+        top: -80px;
+        left:  100px;
+    }
+        
+    #x6 {
+        top: 380px;
+        right: 145px;
+    }
+}
+
+
+@media(max-width: 768px) {
+
+    body {
+        background-image: url("/images/background-tablet.png");
+    }
+
+    #x1 {
+        display: none;
+    }
+    #y1 {
+        position: absolute;
+        z-index: -5;
+        top: 300px;
+        right: 30px;
+        display: block;
+    }
+
+    #x2 {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: -20px;
+        opacity: 0.5;
+        z-index: -5;
+    }
+    #x3 {
+        top: -135px;
+        left: -50px;
+    }
+    
+    #x5 {
+        top: -80px;
+        left: 110px;
+        width: 150px;
+    }
+    
+    #x6 {
+        width: 150px;
+        top: 380px;
+        right: 45px;
+    }
+}
+
+@media(max-width: 500px) {
+
+    body {
+            background-image: url("/images/background-mobile.png");
+            background-size: cover;
+            background-position: center;
+            transform: translateX(20px);
+            overflow-x: none;
+        }
+    
+        #y1 {
+            display: block;
+            position: absolute;
+            z-index: -5;
+            top: 90%;
+            left: -50px;
+            width: 400px;
+            height: 250px;
+        }
+    
+        #x2 {
+            position: absolute;
+            justify-self: right;
+            top: 0px;
+            right: -20px;
+            opacity: 0.8;
+            z-index: -5;
+            width: 150px;
+            height: 150px;
+        }
+    
+        #x3 {
+            display: none;
+        }
+    
+        #x5 {
+            top: -80px;
+            left: 110px;
+            width: 150px;
+        }
+    
+        #x6 {
+            width: 150px;
+            top: 380px;
+            right: 45px;
+        }
+        #div1 {
+            width: 95%;
+            margin: auto;
+        }
+        #div2 {
+            width: 95%;
+            margin: auto;
+        }
+        #div3 {
+            width: 100%;
+            margin: auto;
+        }
+
+        #tik {
+            width: 450px;
+        }
+
+        #about {
+            gap: 10px;
+            left: 20px;
+            top: 260px;
+        }
+        #image #imageofticket, #image {
+            width: 65px;
+            height: 65px;
+        }
+        #about h2 {
+            font-size: 1.6em;
+        }
+        #div3 h1 {
+            position: relative;
+            left: 365px;
+            top: 160px;
+            width: fit-content;
+        }
+        #div3 h3 {
+            top: 210px;
+            right: -65px;
+        }
+}
+@media (max-width: 450px) {
+    #div1 {
+        margin: auto;
+    }
+    #tik {
+        width: 420px;
+    }
+    #div3 h1 {
+        left: 345px;
+    }
+}
+@media (max-width: 400px) {
+    #tik {
+        width: 400px;
+    }
+
+    #div3 h1 {
+        left: 325px;
+        font-size: 1.6em;
+    }
+                #about {
+                    gap: 10px;
+                    left: 20px;
+                    top: 245px;
+                }
+}

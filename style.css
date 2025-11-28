@@ -94,19 +94,24 @@ body {
 #bcg {
     position: absolute;
     top: 0;
-    background-image: radial-gradient(ellipse 30% 75% at 50% -30%, rgba(182, 182, 211, 0.362), rgba(255, 255, 255, 0));
-    width: 100%;
-    height:100%;
+    justify-self: center;
+    background-image: radial-gradient(ellipse 50% 100% at 50% -30%, rgba(182, 182, 211, 0.362), rgba(255, 255, 255, 0));
+    width: 50%;
+    height:50%;
     z-index: -2;
-    animation: bcg 2.5s alternate infinite;
+    animation: bcg 5s alternate infinite ease;
 }
 @keyframes bcg {
-    from {
-        scale: 1;
+    0% {
+        width: 50%;
     }
 
-    to {
-        scale: 2;
+    50% {
+        width: 30%;
+    }
+
+    100% {
+        width: 50%;
     }
 }
 
